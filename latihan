@@ -1,0 +1,37 @@
+class segitiga(object):
+   def __init__(self, x, y):
+      self.alas = x
+      self.tinggi = y
+
+   def hitungLuas(self):
+      return self.alas * self.tinggi / 2
+
+   def cetakData(self):
+      print("panjang\t: ", self.alas)
+      print("lebar\t: ", self.tinggi)
+      
+
+   def cetakLuas(self):
+      print("Luas\t= ", self.hitungLuas())
+
+# mendefinisikan kelas turunan (subclass)
+class segitigaWarna(segitiga):
+   def __init__(self, x, y, w):
+      self.alas = x
+      self.tinggi = y
+      self.warna = w
+   def cetakData(self):
+      print("alas\t: ", self.alas)
+      print("tinggi\t: ", self.tinggi)
+      print("warna\t: ", self.warna)
+
+def main():
+   # membuat objek KotakWarna
+   segitigaWarna1 = segitigaWarna(10, 5, "red")
+
+   # menggunakan objek
+   segitigaWarna1.cetakData()
+   segitigaWarna1.cetakLuas()
+
+if __name__ == "__main__":
+   main()
